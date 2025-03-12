@@ -1,5 +1,5 @@
 
-package com.cmcglobal.baitap21;
+package com.cmcglobal.baitap2;
 
 import java.util.Scanner;
 
