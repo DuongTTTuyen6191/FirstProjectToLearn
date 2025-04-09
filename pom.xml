@@ -13,43 +13,55 @@
         <maven.complier>3.8.1</maven.complier>
         <maven.surfire>3.0.0-M5</maven.surfire>
     </properties>
+
     <dependencies>
         <dependency>
-            <groupId>org.selenium</groupId>
+            <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>${junit}</version>
-            <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>${junit}</version>
-            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.java}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-complier-plugins</artifactId>
-                <version>${maven.compliler}</version>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.complier}</version>
                 <configuration>
                     <source>21</source>
                     <target>21</target>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-complier-plugins</artifactId>
-                <version>${maven.surfire}</version>
-                <configuration>
-                    <configuration
-                    <include>
-                        <include>**/*Test.java</include>
-                    </include>
-                </configuration>
+            <!--            <plugin>-->
+            <!--                <groupId>org.apache.maven.plugins</groupId>-->
+            <!--                <artifactId>maven-complier-plugins</artifactId>-->
+            <!--                <version>${maven.surfire}</version>-->
+            <!--                <configuration>-->
+            <!--                    <configuration-->
+            <!--                    <include>-->
+            <!--                        <include>**/*Test.java</include>-->
+            <!--                    </include>-->
+            <!--                </configuration>-->
 
-            </plugin>
+            <!--            </plugin>-->
         </plugins>
     </build>
 
